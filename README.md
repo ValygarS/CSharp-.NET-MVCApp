@@ -10,7 +10,7 @@ Simple ASP.NET MVC Application to send SMS texts to saved persons.
 ![Error](Images/error_no_contact.jpg "Error page: contact not found")
 
 ## Overview
-- An example of ASP.NET MVC Application to show some basic functionality of sending an SMS text message to a person from saved list of contacts
+- An example of [ASP.NET MVC Application](https://www.asp.net/mvc) to show some basic functionality of sending an SMS text message to a person from saved list of contacts
 
 - A mock database had been used, that could be replaced by actual database to save contacts data
 

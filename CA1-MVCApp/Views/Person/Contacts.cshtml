@@ -1,0 +1,52 @@
+﻿@model List<CA1_MVCApp.Models.Person>
+
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<h2>Contacts List</h2>
+
+    <table class="table">
+
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().PhoneNumber)
+            </th>
+            <th></th>
+        </tr>
+
+        @for (int i=0; i<Model.Count(); i++)
+        {
+            <tr>
+            @using (Html.BeginForm("SendText", "Person", FormMethod.Post))
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem[i].FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem[i].LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => modelItem[i].AreaCode) @Html.DisplayFor(modelItem => modelItem[i].PhoneNumber)
+                </td>
+                <td>
+                    <input type="hidden" value="@Model[i].AreaCode@Model[i].PhoneNumber" name="PhoneNumber">
+                    <input type="submit" name="button" value="Send Text" class="btn btn-success" />
+
+                </td>
+            }
+                
+            </tr>
+        }
+    </table>
+
+
+
+
+    

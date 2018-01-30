@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Error";
+}
+
+<div class="alert-warning">
+    <h2>Error! No contact with such number has been found in the Contact List.</h2>
+</div>
+<br />
+<br />
+<div>
+    @using(Html.BeginForm("Index", "Home"))
+    {
+        <input type="submit" value="Send New SMS" class="btn btn-warning" />
+    }
+</div>
+

@@ -1,0 +1,31 @@
+﻿@model CA1_MVCApp.Models.Person
+
+@{
+    ViewBag.Title = "SMS sent successfully";
+}
+<br />
+<br />
+<br />
+
+<div class="alert-success">
+<p><h2>Your message to @Html.ValueFor(Model => Model.FirstName) @Html.ValueFor(Model => Model.LastName) 
+    has been sent successfully!</h2></p>
+</div>
+
+
+<div class="text-info">
+    <h3>Your message text:</h3>
+</div>
+<div style="font-style:italic">
+    <h4>@ViewBag.Message</h4>
+</div>
+<br />
+<br />
+<div>
+    @using (Html.BeginForm("Index", "Home"))
+    {
+        <input type="submit" value="Send New SMS" class="btn btn-info" />
+    }
+</div>
+
+
